@@ -1,0 +1,6 @@
+- hosts: test
+  tasks:
+    - name: 'test_git'
+      command: df -h
+      register: storage
+    - debug: var=storage.stdout_lines
